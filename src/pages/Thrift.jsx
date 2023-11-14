@@ -40,13 +40,13 @@ function ThriftDetails({ oke }) {
     <div className="container text-center mx-auto mt-8">
       {loader? <Loader /> :
       <>
-      <h2 className="text-4xl md:text-center font-bold mb-4">{thrift.thriftName}</h2>
+      <h2 className="text-4xl md:text-center capitalize font-bold mb-4">{thrift.thriftName}</h2>
       <div className="my-4 md:flex font-semibold justify-between">
       <p className="my-2">Thrift Admin: {thrift.thriftAdmin}</p>
       <p className='my-2'>Thrift status: {thrift.thriftStatus}</p>
       </div>
       <div className='text-start'>
-       <h4 className='text-2xl my-3 font-semibold'> thrift members: </h4>{thrift && thrift.thriftMembers.map((member, index)=>(
+       <h4 className='text-2xl my-3 text-center md:text-left font-semibold'> Thrift members: </h4>{thrift && thrift.thriftMembers.map((member, index)=>(
           <p key={index}>{index + 1}. {member}</p>
         ))}
       </div>

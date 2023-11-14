@@ -124,7 +124,7 @@ const Dashboard = () => {
                         <div className="  justify-end gap-x-5 flex items-center">
                         
                             
-                   <div className="border-2 mt-5  items-center flex gap-x-1 p-2 px-4 cursor-pointer font-semibold rounded-lg">
+                   <div className="border-2 mt-5 hidden   items-center md:flex gap-x-1 p-2 px-4 cursor-pointer font-semibold rounded-lg">
                        <FaUser /><div className="hidden md:flex"> Account</div>
                    </div>
                    <div className="border-2 md:text- mt-5 p-3 py-6 font-semibold cursor-pointer rounded-full">
