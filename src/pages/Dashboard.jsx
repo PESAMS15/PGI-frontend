@@ -13,6 +13,8 @@ import { fetchingError, fetchingProduct, fetchingSuccessful } from '../Redux/use
 import { fetchingSuccess } from '../Redux/thrifts';
 import Loader from '../components/Loader';
 import { fetchSuccess } from '../Redux/transactions';
+import { ToastContainer, toast } from 'react-toastify'
+
 
 
 
@@ -53,8 +55,8 @@ const Dashboard = () => {
         })
         .catch((err) => {
             dispatch(fetchingError(err.message))
-            alert(err.response.data.message)
-            console.log(err)
+            toast.error(err.response.data.message)
+            // console.log(err)
             navigate("/signin")
         })
     }, []), 1000)
@@ -124,6 +126,18 @@ const Dashboard = () => {
                        <Outlet />
                    </div>
                  </div>
+                 <ToastContainer 
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="colored"
+            />
 
          </div>
           
