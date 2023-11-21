@@ -67,20 +67,8 @@ const Dashboard = () => {
         maximumFractionDigits: 2,
 
     })
-    const [timeOfDay, setTimeOfDay] = useState('');
 
-    useEffect(() => {
-      const currentTime = new Date();
-      const currentHour = currentTime.getHours();
-    
-      if (currentHour >= 5 && currentHour < 12) {
-        setTimeOfDay('Morning');
-      } else if (currentHour >= 12 && currentHour < 18) {
-        setTimeOfDay('Afternoon');
-      } else {
-        setTimeOfDay('Evening');
-      }
-    }, []);
+ 
     
     
     // console.log(wallet)
@@ -132,7 +120,7 @@ const Dashboard = () => {
                    </div>
                         </div>
                    </div>
-                   <div className='md:mt-20 mt-8 p-2'>
+                   <div className='md:mt-20 mt-5 p-2'>
                        <Outlet />
                    </div>
                  </div>

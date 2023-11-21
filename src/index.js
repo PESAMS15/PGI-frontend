@@ -21,6 +21,7 @@ import Thrifts from './components/Thrifts';
 import Wallet from './pages/Wallet';
 import Join from './pages/Join';
 import Transactions from './pages/Transactions';
+import NotFound from './pages/NotFound';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -45,6 +46,8 @@ root.render(
           
         </Route>
         <Route path='/chats' element={<chats />}/>
+       <Route path="/*" element={<NotFound />} />
+
        
       </Routes>
       </Provider>

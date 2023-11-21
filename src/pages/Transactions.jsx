@@ -82,4 +82,4 @@ const Transactions = () => {
   )
 }
 
-export default Transactions
+export default Transactions;
