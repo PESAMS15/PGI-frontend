@@ -45,7 +45,7 @@ const Dash = () => {
       <section className="grid md:grid-cols-2 md:gap-8">
         <div onClick={()=> Link("transactions")} className="bg-white p-4 cursor-pointer  hover:bg-slate-100 transition-all rounded shadow-md">
           <h2 className="text-2xl font-semibold mb-4 text-center md:text-left">Latest Transactions!</h2>
-          {transactions &&  !reversedTransactions? "you have no transactions yet" :    (
+          {transactions &&  reversedTransactions===0? "you have no transactions yet" :    (
           <ul>
             {reversedTransactions.slice(0, 3).map((transaction) => (
               <li key={transaction.id} className="mb-4 border-b pb-2">
@@ -61,7 +61,7 @@ const Dash = () => {
         <div onClick={()=> Link("thrifts")} className="bg-white cursor-pointer hover:bg-slate-100 transition-all p-4 rounded shadow-md">
           <h2 className="text-2xl text-center md:text-left font-semibold mb-4">Your Thrifts!</h2>
       
-          {thrifts && (
+          {thrifts && thrifts.length ===0? "Sorry you've not joined any thrifts": (
             <ul>
               {thrifts.slice(0, 3).map((thrift) => (
                 <li key={thrift.id} className="mb-4 border-b pb-2">

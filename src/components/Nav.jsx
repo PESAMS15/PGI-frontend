@@ -77,7 +77,7 @@ const Nav = ({balance}) => {
       </div>
 
       {/* Button to toggle the offcanvas menu */}
-      <button className="fixed w-full items-center  bg-blue-900 top-0 p-3 py-2 flex justify-between left-0 text-2xl text-white" >
+      <div className="fixed w-full items-center  bg-blue-900 top-0 p-3 py-2 flex justify-between left-0 text-2xl text-white" >
       {/* <img src={logo} className='w-32 FaUserCircle ' alt="" /> */}
       <RiMenu2Fill onClick={handleToggleMenu}  />
         <div className=" text-white justify-end gap-x-5 flex items-center">
@@ -90,7 +90,7 @@ const Nav = ({balance}) => {
                    &#x20A6; {balance? balance : "0.00"}
       </div>
       </div>
-      </button>
+      </div>
         </div>
     </div>
   )
