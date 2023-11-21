@@ -25,10 +25,10 @@ function SignIn() {
     let uri = "https://persy-grow-investment.onrender.com/users/login"
     const signin = () => {
         setloader(true)
-        console.log(details)
+        // console.log(details)
 
         axios.post(uri, details).then((res) => {
-            console.log(res)
+            // console.log(res)
             localStorage.setItem("token", res.data.token)
             // alert(res.data.message)
             setloader(false)

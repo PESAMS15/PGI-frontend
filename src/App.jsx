@@ -24,11 +24,11 @@ function App() {
   let uri = "https://persy-grow-investment.onrender.com/users/signup"
   const signup = () => {
     setloader(true)
-    console.log(details)
+    // console.log(details)
 
     axios.post(uri, details).then((res)=>{
       setloader(false)
-      console.log(res)
+      // console.log(res)
       toast.success(res.data.message)
       // alert(res.data.message)
       setTimeout(() => {
