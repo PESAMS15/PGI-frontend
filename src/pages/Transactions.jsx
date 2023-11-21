@@ -7,7 +7,7 @@ import TimeAgo from '../components/TimeAgo'
 const Transactions = () => {
     const {  transactions  } = useSelector((state)=> state.transactions)
     const reversedTransactions = [...transactions].reverse();
-    console.log(reversedTransactions);
+    // console.log(reversedTransactions);
     function formatDate(dateString) {
         const today = new Date();
         const inputDate = new Date(dateString);

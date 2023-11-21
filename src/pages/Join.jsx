@@ -13,7 +13,7 @@ function Join({ oke }) {
 
     const route = useParams();
     const id = route.id 
-    console.log(id)
+    // console.log(id)
   const [thrift, setThrift] = useState(null);
 
   useEffect(() => {

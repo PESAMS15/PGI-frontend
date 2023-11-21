@@ -36,18 +36,18 @@ const Create = () => {
           }
       }).then((res) => {
         setloader(false)
-          console.log(res.data)
+          // console.log(res.data)
           setusname(res.data.checkUser.userName)
           
       }).catch((err) => {
         setloader(false)
           // alert(err.response.data.message)
           toast.error(err.response.data.message)
-          console.log(err)
+          // console.log(err)
           navigate("/signin")
       })
   }, []), 1000)
-  console.log(usname)
+  // console.log(usname)
 
 
 
@@ -61,10 +61,10 @@ const Create = () => {
   let url = "https://persy-grow-investment.onrender.com/thrifts/create"
   const creat = ()=>{
         setloader(true)
-         console.log(details)
+        //  console.log(details)
         axios.post(url, details).then((res) => {
           setloader(false)
-          console.log(res.data)
+          // console.log(res.data)
           // let id = res.data.thrift._id
           setid(res.data.thrift._id)
 

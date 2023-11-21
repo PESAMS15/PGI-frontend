@@ -12,9 +12,9 @@ const Thrifts = ({userName}) => {
     const [data, setdata] = useState(null)
     const { isFetching, user, fetchingFailed } = useSelector((state)=> state.user)
     const {  thrifts,  } = useSelector((state)=> state.thrifts)
-    console.log(user)
+    // console.log(user)
    
-    console.log(thrifts)
+    // console.log(thrifts)
     
     // const token = localStorage.getItem("token")
     // const navigate = useNavigate()

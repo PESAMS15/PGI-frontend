@@ -12,7 +12,7 @@ const Wallet = () => {
   const [phone, setPhone] = useState("")
   const { isFetching, user, fetchingFailed } = useSelector((state)=> state.user)
 
-  console.log(user)
+  // console.log(user)
 
   const componentProps = {
     email: user.email,
@@ -33,7 +33,7 @@ const Wallet = () => {
       //  alert("Transaction successfully")
        console.log(response)
        axios.post(url, {amount: amount, userName: user.userName}).then((res)=>{
-          console.log(res.data)
+          // console.log(res.data)
           window.location.reload();
        }).catch((err)=>{
           console.log(err.response.data.message)
