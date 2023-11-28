@@ -22,6 +22,7 @@ import Wallet from './pages/Wallet';
 import Join from './pages/Join';
 import Transactions from './pages/Transactions';
 import NotFound from './pages/NotFound';
+import Process from './pages/Process';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -47,6 +48,7 @@ root.render(
         </Route>
         <Route path='/chats' element={<chats />}/>
        <Route path="/*" element={<NotFound />} />
+       <Route path="/process" element={<Process />} />
 
        
       </Routes>
