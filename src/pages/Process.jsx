@@ -10,6 +10,7 @@ const Process = () => {
             window.location.reload()
         }, 3000);
     }).catch((err)=>{
+        toast.error("AN error occured")
         console.log(err)
     })
     }
