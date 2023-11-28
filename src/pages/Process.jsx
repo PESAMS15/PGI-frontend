@@ -16,7 +16,7 @@ const Process = () => {
     
   return (
     <div>
-      <div className="text-center"><button onClick={pro} className="p-3 bg-black block w-full rounded">Process all transactions</button></div>
+      <div className="text-center"><button onClick={pro} className="p-3 bg-black text-white my-10 block w-full rounded">Process all transactions</button></div>
       <ToastContainer 
                 position="top-right"
                 autoClose={5000}
