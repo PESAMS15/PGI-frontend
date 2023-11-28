@@ -1,10 +1,14 @@
 import axios from 'axios'
 import React from 'react'
+import { ToastContainer, toast } from 'react-toastify'
 
 const Process = () => {
     const pro =()=>{
         axios.post("https://persy-grow-investment.onrender.com/thrifts/process").then(()=>{
-        window.location.reload()
+        toast.success("All transactions processed")
+        setTimeout(() => {
+            window.location.reload()
+        }, 3000);
     }).catch((err)=>{
         console.log(err)
     })
@@ -13,6 +17,18 @@ const Process = () => {
   return (
     <div>
       <div className="text-center"><button onClick={pro} className="p-3 bg-black block w-full rounded">Process all transactions</button></div>
+      <ToastContainer 
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="colored"
+            />
     </div>
   )
 }

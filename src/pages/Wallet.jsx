@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { PaystackButton } from "react-paystack"
 import { useSelector } from "react-redux"
 import axios from "axios"
+import { ToastContainer, toast } from "react-toastify"
 // import "./App.css"
 
 const Wallet = () => {
@@ -33,6 +34,7 @@ const Wallet = () => {
       //  alert("Transaction successfully")
        console.log(response)
        axios.post(url, {amount: amount, userName: user.userName}).then((res)=>{
+        toast.success("Wallet funded successfully")
           // console.log(res.data)
           window.location.reload();
        }).catch((err)=>{
@@ -41,7 +43,7 @@ const Wallet = () => {
 
 
     },
-    onClose: () => alert("Transaction Failed"),
+    onClose: () => toast.error("Transaction Failed"),
   }
 
   return (
@@ -90,6 +92,18 @@ const Wallet = () => {
           <PaystackButton  className="bg-blue-950 mt-7 w-1/2 md:w-full text-white py-4 font-semibold  rounded-lg" {...componentProps} />
         </div>
       </div>
+      <ToastContainer 
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="colored"
+            />
     </div>
   )
 }
