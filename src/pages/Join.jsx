@@ -41,6 +41,9 @@ function Join({ oke }) {
     .then((res)=> {
       setloader(false)
       toast.success(res.data.message)
+      setTimeout(() => {
+        navigate(`thrifts/${id}`)
+       }, 3000);
   
     }).catch((err)=>{
       setloader(false)
