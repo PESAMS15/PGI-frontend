@@ -5,8 +5,10 @@ import Loader from '../components/Loader';
 import { useDispatch, useSelector } from 'react-redux'
 
 import { ToastContainer, toast } from 'react-toastify'
+import { useNavigate } from 'react-router-dom/';
 
 function Join({ oke }) {
+  const navigate = useNavigate()
   const { isFetching, user, fetchingFailed } = useSelector((state)=> state.user)
 
   const [loader, setloader] = useState(true)
