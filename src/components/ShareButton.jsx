@@ -7,7 +7,7 @@ const ShareButton = ({thriftName, id}) => {
         await navigator.share({
           title: `Join ${thriftName}`,
           text: `Click on this link to join ${thriftName} !`,
-          url: `https://pgi.netlify.app/dashboard/join/${id}`,
+          url: `https://pgi-alpha.vercel.app/dashboard/join/${id}`,
         });
       } else {
         // Fallback for browsers that do not support the Web Share API
